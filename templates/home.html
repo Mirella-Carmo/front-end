@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'home.css')}}">
+    <title>Eventos Universitarios</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Eventos Acadêmicos</li>
+                <li><a href="{{url_for('categoria_ia')}}">Categorias</a></li>
+                <li><a href="{{url_for('todos_palestrantes')}}">Lista de Palestrantes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner_principal">
+        <img src="https://profitec.com.br/blog/wp-content/uploads/2019/09/x-eventos-academicos-para-participar-todo-ano.jpg" alt="">
+        <h1>Em destaque</h1>
+    </section>
+
+    <section class="eventos">
+        <div class="palestra">
+            <img src="https://blog.psicomanager.com.br/wp-content/uploads/2019/10/saiba-como-tornar-sua-palestra-unica-e-engajar-o-publico-1200x800_c-1.jpeg" alt="palestra">
+            <h1>Palestra: Inteligência Artificial</h1>
+            <p>Data: 02/05/2025</p>
+
+            <form action="{{url_for('detalhes_palestra')}}">
+                <button>Saiba mais</button>
+            </form>
+        </div>
+
+        <div class="workshop">
+            <img src="https://forbes.com.br/wp-content/uploads/2023/02/carreira-tech-inteligencia-artificial-trabalho.jpg" alt="workshop">
+            <h1>Workshop: Dev. Software</h1>
+            <p>Data: 03/05/2025</p>
+
+            <form action="{{url_for('detalhes_workshop')}}">
+                <button>Saiba mais</button>
+            </form>
+        </div>
+        <div class="miniCurso">
+            <img src="https://anbc.org.br/wp-content/uploads/2024/02/tecnologia-800x400.webp" alt="">
+            <h1>Mini Curso: Criação de aplicativos</h1>
+            <p>Data: 04/05/2025</p>
+
+            <form action="{{url_for('detalhes_miniCurso')}}">
+                <button>Saiba mais</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Página Principal</p>
+    </footer>
+</body>
+</html>

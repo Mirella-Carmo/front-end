@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'categorias.css')}}">
+    <title>Categorias</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('home')}}">Eventos Acadêmicos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div class="texto">
+            <h1>Acesse as categorias do evento</h1>
+        </div>
+
+        <div class="categorias">
+            <div class="ia">
+                <img src="{{palestra.get_imagem()}}" alt="">
+                <a href="{{url_for('detalhes_palestra')}}">{{palestra.get_nome()}}</a>
+            </div>
+
+            <div class="dev_software">
+                <img src="{{workshop.get_imagem()}}" alt="">
+                <a href="{{url_for('detalhes_workshop')}}">{{workshop.get_nome()}}</a>
+            </div>
+
+            <div class="dev_app">
+                <img src="{{miniCurso.get_imagem()}}" alt="">
+                <a href="{{url_for('detalhes_miniCurso')}}">{{miniCurso.get_nome()}}</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Página Principal</p>
+    </footer>
+</body>
+</html>

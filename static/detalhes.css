@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #131313;
+    color: rgb(232, 232, 232);
+    font-family: 'Inconsolata', sans-serif;
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    padding-top: 25px;
+    
+}
+
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding-left: 50px;
+}
+
+.detalhes{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.banner{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.banner img{
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 25%;
+    position: absolute;
+}
+
+.info h1{
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.info p{
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    padding-left: 90px;
+}
+
+.texto_descricao h1{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.texto_descricao p{
+    font-size: 20px;
+    line-height: 50px;
+    width: 50rem;
+}
+
+.palestrante{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.palestrante img{
+    width: 45%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.palestrante h1{
+    font-size: 25px;
+    font-weight: 100;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    
+}
+
+.palestrante p{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.palestrante button{
+    color: aqua;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline aqua;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(16, 27, 130);
+    margin-top: 100px;
+    padding-left: 50px;
+}
+
+footer p{
+    color: white;
+    font-size: 20px;
+}

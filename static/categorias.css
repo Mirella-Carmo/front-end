@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.main {
+    flex: 1;
+}
+
+body{
+    background-color: #131313;
+    color: rgb(232, 232, 232);
+    font-family: 'Inconsolata', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    padding-top: 25px;
+    
+}
+
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding-left: 50px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .texto h1{
+    font-size: 30px;
+}
+
+.categorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    column-gap: 100px;
+}
+
+.categorias img{
+    width: 150px;
+    height: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.categorias a{
+    cursor: pointer;
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.ia, .dev_software, .dev_app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(16, 27, 130);
+    margin-top: 100px;
+    padding-left: 50px;
+}
+
+footer p{
+    color: white;
+    font-size: 20px;
+}

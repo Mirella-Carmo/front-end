@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'lista_palestrante.css')}}">
+    <title>Lista de Palestrantes</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('home')}}">Eventos Acadêmicos</a></li>
+                <li><a href="{{url_for('categoria_ia')}}">Categorias</a></li>
+                <li><a href="{{url_for('todos_palestrantes')}}">Lista de Palestrantes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="listaPalestrantes">
+        {% for palestrante in listaPalestrante %}
+            <div class="eventos">
+                <img src="{{palestrante.get_imagem()}}" alt="imagem">
+                <h1>{{palestrante.get_nome()}}</h1>
+                <p><a href="">{{palestrante.get_nome_evento()}}</a></p>
+            </div>
+        {% endfor %}
+    </section>
+</body>
+</html>

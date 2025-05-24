@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'detalhes.css')}}">
+    <title>detalhes do Evento</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('home')}}">Eventos Acadêmicos</a></li>
+                <li><a href="{{url_for('categoria_ia')}}">Categorias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="detalhes">
+        <div class="banner">
+            <img src="{{detalhes.get_banner()}}" alt="img">
+        </div>
+
+
+        <div class="info">
+            <h1>{{detalhes.get_titulo()}}</h1>
+            <p>{{detalhes.get_data_hora()}}</p>
+            <p>{{detalhes.get_local()}}</p>
+        </div>
+
+    </section>
+
+    <section class="descricao">
+        <div class="texto_descricao">
+            <h1>Descrição</h1>
+            <p>{{detalhes.get_descricao()}}</p>
+        </div>
+
+        <div class="palestrante">
+            <img src="{{detalhes.foto_palestrante}}" alt="">
+            <h1>Palestrante</h1>
+            <p>{{detalhes.get_nome_palestrante()}}</p>
+
+            <form action="{{url_for('palestrante_eventos', id = palestrante.get_id())}}"> <!--aqui recebe uma variável (que direciona para a função de cada palestrante)-->
+                <button>Mais informações</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Página de detalhes</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inconsolata', sans-serif;
+    background-color: beige;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(16, 27, 130);
+    
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    color: white;
+    font-size: 25px;
+    padding-top: 25px;
+    
+}
+
+nav ul li a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    padding-left: 50px;
+}
+
+.banner_principal{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+}
+
+.banner_principal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner_principal h1{
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.eventos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 80px;
+    margin-top: 50px;
+}
+
+.eventos img{
+    width: 20rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.palestra, .workshop, .miniCurso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.palestra h1, .workshop h1, .miniCurso h1{
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 20px;
+}
+
+.palestra p, .workshop p, .miniCurso p{
+    padding-top: 10px;
+}
+
+.eventos button{
+    width: 120px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(75, 37, 212);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.eventos button:hover{
+    background-color: rgb(31, 5, 126);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(16, 27, 130);
+    margin-top: 100px;
+    padding-left: 50px;
+}
+
+footer p{
+    color: white;
+    font-size: 20px;
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inconsolata', sans-serif;
+    background-color: beige;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(16, 27, 130);
+    
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    color: white;
+    font-size: 25px;
+    padding-top: 25px;
+    
+}
+
+nav ul li a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    padding-left: 50px;
+}
+
+.listaPalestrantes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 60px;
+    padding-top: 50px;
+}
+
+.listaPalestrantes img{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
