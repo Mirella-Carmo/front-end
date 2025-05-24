@@ -13,21 +13,22 @@
         <nav>
             <ul>
                 <li><a href="{{url_for('home')}}">Eventos Acadêmicos</a></li>
-                <li><a href="{{url_for('categoria_ia')}}">Categorias</a></li>
+                <li><a href="{{url_for('categoria')}}">Categorias</a></li>
+                <li><a href="{{url_for('todos_palestrantes')}}">Lista de Palestrantes</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="detalhes">
         <div class="banner">
-            <img src="{{detalhes.get_banner()}}" alt="img">
+            <img src="{{evento.get_banner()}}" alt="img">
         </div>
 
 
         <div class="info">
-            <h1>{{detalhes.get_titulo()}}</h1>
-            <p>{{detalhes.get_data_hora()}}</p>
-            <p>{{detalhes.get_local()}}</p>
+            <h1>{{evento.get_titulo()}}</h1>
+            <p>{{evento.get_data_hora()}}</p>
+            <p>{{evento.get_local()}}</p>
         </div>
 
     </section>
@@ -35,17 +36,17 @@
     <section class="descricao">
         <div class="texto_descricao">
             <h1>Descrição</h1>
-            <p>{{detalhes.get_descricao()}}</p>
+            <p>{{evento.get_descricao()}}</p>
         </div>
 
         <div class="palestrante">
-            <img src="{{detalhes.foto_palestrante}}" alt="">
+            <img src="{{evento.foto_palestrante}}" alt="">
             <h1>Palestrante</h1>
-            <p>{{detalhes.get_nome_palestrante()}}</p>
+            <p>{{evento.get_nome_palestrante()}}</p>
 
-            <form action="{{url_for('palestrante_eventos', id = palestrante.get_id())}}"> <!--aqui recebe uma variável (que direciona para a função de cada palestrante)-->
+            <a href="{{url_for('palestrante_eventos', id = evento.get_id_palestrante())}}"> <!--aqui recebe uma variável (que direciona para a função de cada palestrante)-->
                 <button>Mais informações</button>
-            </form>
+            </a>
         </div>
     </section>
 

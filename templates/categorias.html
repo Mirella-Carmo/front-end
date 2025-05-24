@@ -11,6 +11,8 @@
         <nav>
             <ul>
                 <li><a href="{{url_for('home')}}">Eventos Acadêmicos</a></li>
+                <li><a href="{{url_for('categoria')}}">Categorias</a></li>
+                <li><a href="{{url_for('todos_palestrantes')}}">Lista de Palestrantes</a></li>
             </ul>
         </nav>
     </header>
@@ -21,20 +23,12 @@
         </div>
 
         <div class="categorias">
+            {% for categoria in categorias%}
             <div class="ia">
-                <img src="{{palestra.get_imagem()}}" alt="">
-                <a href="{{url_for('detalhes_palestra')}}">{{palestra.get_nome()}}</a>
+                <img src="{{categoria.get_imagem()}}" alt="">
+                <a href="{{url_for('detalhes_evento', id = categoria.get_id_evento())}}">{{categoria.get_nome()}}</a>
             </div>
-
-            <div class="dev_software">
-                <img src="{{workshop.get_imagem()}}" alt="">
-                <a href="{{url_for('detalhes_workshop')}}">{{workshop.get_nome()}}</a>
-            </div>
-
-            <div class="dev_app">
-                <img src="{{miniCurso.get_imagem()}}" alt="">
-                <a href="{{url_for('detalhes_miniCurso')}}">{{miniCurso.get_nome()}}</a>
-            </div>
+            {% endfor %}
         </div>
     </section>
 

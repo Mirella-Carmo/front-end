@@ -73,19 +73,19 @@ nav ul li a{
     border-radius: 20px;
 }
 
-.palestra, .workshop, .miniCurso{
+.lista_eventos{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.palestra h1, .workshop h1, .miniCurso h1{
+.lista_eventos h1{
     font-size: 20px;
     font-weight: 300;
     padding-top: 20px;
 }
 
-.palestra p, .workshop p, .miniCurso p{
+.lista_eventos p{
     padding-top: 10px;
 }
 

@@ -1,6 +1,7 @@
 class Evento:
     def __init__(self):
-        self.id = 0
+        self.id_evento = 0
+        self.id_palestrante = 0
         self.banner = ''
         self.titulo = ''
         self.data_hora = ''
@@ -8,12 +9,19 @@ class Evento:
         self.descricao = ''
         self.nome_palestrante = ''
         self.foto_palestrante = ''
+        self.curriculo_palestrante = ''
         
-    def set_id(self, id):
-        self.id = id
+    def set_id(self, id_evento):
+        self.id_evento = id_evento
     
     def get_id(self):
-        return self.id
+        return self.id_evento
+
+    def set_id_palestrante(self, id):
+        self.id_palestrante = id
+    
+    def get_id_palestrante(self):
+        return self.id_palestrante
     
     def set_banner(self, link):
         self.banner = link
@@ -56,3 +64,9 @@ class Evento:
     
     def get_foto_palestrante(self):
         return self.foto_palestrante
+    
+    def set_curriculo_palestrante(self, curriculo):
+        self.curriculo_palestrante = curriculo
+    
+    def get_curriculo_palestrante(self):
+        return self.curriculo_palestrante

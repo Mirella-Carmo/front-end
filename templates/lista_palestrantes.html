@@ -11,18 +11,18 @@
         <nav>
             <ul>
                 <li><a href="{{url_for('home')}}">Eventos Acadêmicos</a></li>
-                <li><a href="{{url_for('categoria_ia')}}">Categorias</a></li>
+                <li><a href="{{url_for('categoria')}}">Categorias</a></li>
                 <li><a href="{{url_for('todos_palestrantes')}}">Lista de Palestrantes</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="listaPalestrantes">
-        {% for palestrante in listaPalestrante %}
+        {% for palestrante in lista_palestrantes %}
             <div class="eventos">
-                <img src="{{palestrante.get_imagem()}}" alt="imagem">
-                <h1>{{palestrante.get_nome()}}</h1>
-                <p><a href="">{{palestrante.get_nome_evento()}}</a></p>
+                <img src="{{palestrante.get_foto_palestrante()}}" alt="imagem">
+                <h1>{{palestrante.get_nome_palestrante()}}</h1>
+                <p><a href="{{url_for('palestrante_eventos', id = palestrante.get_id_palestrante())}}">Saiba mais</a></p>
             </div>
         {% endfor %}
     </section>

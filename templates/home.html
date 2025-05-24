@@ -11,7 +11,7 @@
         <nav>
             <ul>
                 <li>Eventos Acadêmicos</li>
-                <li><a href="{{url_for('categoria_ia')}}">Categorias</a></li>
+                <li><a href="{{url_for('categoria')}}">Categorias</a></li>
                 <li><a href="{{url_for('todos_palestrantes')}}">Lista de Palestrantes</a></li>
             </ul>
         </nav>
@@ -23,34 +23,14 @@
     </section>
 
     <section class="eventos">
-        <div class="palestra">
-            <img src="https://blog.psicomanager.com.br/wp-content/uploads/2019/10/saiba-como-tornar-sua-palestra-unica-e-engajar-o-publico-1200x800_c-1.jpeg" alt="palestra">
-            <h1>Palestra: Inteligência Artificial</h1>
-            <p>Data: 02/05/2025</p>
-
-            <form action="{{url_for('detalhes_palestra')}}">
-                <button>Saiba mais</button>
-            </form>
+        {% for evento in eventos %}
+        <div class="lista_eventos">
+            <img src="{{evento.get_banner()}}" alt="img">
+            <h1>{{evento.get_titulo()}}</h1>
+            <p>{{evento.get_data_hora()}}</p>
+            <a href="{{url_for('detalhes_evento', id = evento.get_id())}}"><button>Saiba mais</button></a>
         </div>
-
-        <div class="workshop">
-            <img src="https://forbes.com.br/wp-content/uploads/2023/02/carreira-tech-inteligencia-artificial-trabalho.jpg" alt="workshop">
-            <h1>Workshop: Dev. Software</h1>
-            <p>Data: 03/05/2025</p>
-
-            <form action="{{url_for('detalhes_workshop')}}">
-                <button>Saiba mais</button>
-            </form>
-        </div>
-        <div class="miniCurso">
-            <img src="https://anbc.org.br/wp-content/uploads/2024/02/tecnologia-800x400.webp" alt="">
-            <h1>Mini Curso: Criação de aplicativos</h1>
-            <p>Data: 04/05/2025</p>
-
-            <form action="{{url_for('detalhes_miniCurso')}}">
-                <button>Saiba mais</button>
-            </form>
-        </div>
+        {% endfor %}
     </section>
 
     <footer>
